@@ -1,0 +1,51 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "metadata-service"
+version = "1.0.0"
+description = "Production-grade metadata management system for data governance"
+authors = [{name = "Data Engineering Team"}]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.poetry]
+name = "metadata-service"
+version = "1.0.0"
+description = "Production-grade metadata management system for data governance"
+authors = ["Data Engineering Team"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+fastapi = "^0.104.0"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+sqlalchemy = "^2.0.0"
+alembic = "^1.13.0"
+python-dotenv = "^1.0.0"
+pymysql = "^1.1.0"
+pydantic = "^2.0.0"
+pydantic-settings = "^2.0.0"
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.0"
+black = "^23.12.0"
+flake8 = "^6.1.0"
+isort = "^5.13.0"
+mypy = "^1.8.0"
+pre-commit = "^3.6.0"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip_gitignore = true
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
